@@ -56,7 +56,6 @@ public class FornecedorService {
         Fornecedor fornecedorAtualizado = fornecedor.get();
 
         fornecedorAtualizado.setNomeFantasia(fornecedorAtualizadoNoFront.getNomeFantasia());
-        fornecedorAtualizado.setCnpj(fornecedorAtualizadoNoFront.getCnpj());
         fornecedorAtualizado.setEmail(fornecedorAtualizadoNoFront.getEmail());
         fornecedorAtualizado.setTelefonePrincipal(fornecedorAtualizadoNoFront.getTelefonePrincipal());
         fornecedorAtualizado.setTelefoneSecundario(fornecedorAtualizadoNoFront.getTelefoneSecundario());

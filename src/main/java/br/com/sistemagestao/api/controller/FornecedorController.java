@@ -40,6 +40,12 @@ public class FornecedorController {
         fornecedorService.deletarFornecedorPorId(id);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void atualizarFornecedorPorId(@PathVariable Long id, @RequestBody Fornecedor fornecedorAtualizadoNoFront) {
+        fornecedorService.atualizarFornecedorPorId(id, fornecedorAtualizadoNoFront);
+    }
+
 
 
 }
