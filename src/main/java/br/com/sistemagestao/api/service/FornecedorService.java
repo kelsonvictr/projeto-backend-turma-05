@@ -17,6 +17,7 @@ public class FornecedorService {
     FornecedorRepository fornecedorRepository;
 
     public void criarFornecedor(Fornecedor fornecedor) {
+
         fornecedorRepository.save(fornecedor);
     }
 
@@ -62,11 +63,6 @@ public class FornecedorService {
 
         // 4 - devolver atualizado para o bd
         fornecedorRepository.save(fornecedorAtualizado);
-
-
-
-
-
 
     }
 }
