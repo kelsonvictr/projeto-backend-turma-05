@@ -35,4 +35,8 @@ public class ProdutoController {
         return produtoService.buscarProdutoPorId(id);
     }
 
+    @PutMapping("/{id}")
+
+
+
 }
