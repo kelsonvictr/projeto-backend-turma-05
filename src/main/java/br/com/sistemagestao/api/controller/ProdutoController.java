@@ -36,6 +36,11 @@ public class ProdutoController {
     }
 
     @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProdutoResponseDTO atualizarProdutoPorId(@PathVariable Long id,
+                                                    @Valid @RequestBody ProdutoRequestDTO dto) {
+        return produtoService.atualizarProdutoPorId(id, dto);
+    }
 
 
 
