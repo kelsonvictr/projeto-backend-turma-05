@@ -42,6 +42,12 @@ public class ProdutoController {
         return produtoService.atualizarProdutoPorId(id, dto);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletarProdutoPorId(@PathVariable Long id) {
+        produtoService.deletarProdutoPorId(id);
+    }
+
 
 
 }
