@@ -41,7 +41,10 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public List<ProdutoResponseDTO> listarTodosProdutos() {
-        return List.of();
+        return produtoRepository.findAll()
+                .stream()
+                .map(ProdutoMapper::toResponseDTO)
+                .toList();
     }
 
     @Override
