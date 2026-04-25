@@ -49,7 +49,12 @@ public class ProdutoServiceImpl implements ProdutoService {
 
     @Override
     public ProdutoResponseDTO buscarProdutoPorId(Long id) {
-        return null;
+        Produto produto = produtoRepository.findById(id)
+                .orElseThrow(() -> new
+                        ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "Produto não encontrado"));
+
+        return ProdutoMapper.toResponseDTO(produto);
     }
 
     @Override

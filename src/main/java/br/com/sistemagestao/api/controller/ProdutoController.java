@@ -29,4 +29,10 @@ public class ProdutoController {
         return produtoService.listarTodosProdutos();
     }
 
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProdutoResponseDTO buscarProdutoPorId(@PathVariable Long id) {
+        return produtoService.buscarProdutoPorId(id);
+    }
+
 }
